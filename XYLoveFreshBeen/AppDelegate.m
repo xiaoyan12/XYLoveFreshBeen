@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "XYAppConst.h"
+#import "GuidePageController.h"
+#import "MainTabBarControll.h"
 
 @interface AppDelegate ()
 
@@ -17,9 +20,40 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self setAppStyle];
+    [self buildKeyWindow];
+    [self addNotification];
     return YES;
 }
+//设置入口控制器
+-(void)buildKeyWindow{
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    [self.window makeKeyAndVisible];
+    
+    NSString *isFirstOpenApp = [[NSUserDefaults standardUserDefaults]objectForKey:IsFristOpenApp];
+    
+    if (isFirstOpenApp == nil) {
+        self.window.rootViewController = [[GuidePageController alloc]init];
+        [[NSUserDefaults standardUserDefaults] setObject:IsFristOpenApp forKey:IsFristOpenApp];
+    }else{
+        self.window.rootViewController = [[MainTabBarControll alloc]init];
+    }
+}
 
+-(void)addNotification{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMainTabarController) name:GuideViewControllerDidFinish object:nil];
+}
+
+-(void)showMainTabarController{
+    self.window.rootViewController = [[MainTabBarControll alloc]init];
+}
+
+-(void)setAppStyle{
+    UITabBar *item = [UITabBar appearance];
+    item.tintColor = [UIColor orangeColor];
+    UINavigationBar *navigationBar = [UINavigationBar appearance];
+    navigationBar.translucent = NO;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
