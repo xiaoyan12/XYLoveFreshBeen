@@ -18,6 +18,7 @@
 		3C7EABC21D8E91E300803AC0 /* MainTabBarControll.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EABC11D8E91E300803AC0 /* MainTabBarControll.m */; };
 		3C7EABC81D8E924800803AC0 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EABC71D8E924800803AC0 /* BaseViewController.m */; };
 		3C7EABCB1D8E929000803AC0 /* GuidePageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EABCA1D8E929000803AC0 /* GuidePageController.m */; };
+		3C7EABCE1D8EA34F00803AC0 /* GuideCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EABCD1D8EA34F00803AC0 /* GuideCell.m */; };
 		7293EED5028E9C32F5EAEB77 /* libPods-XYLoveFreshBeenUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEC107D1CFCC5CF30F3DB6E /* libPods-XYLoveFreshBeenUITests.a */; };
 		AC60CB3F78B1F6EC27EB0998 /* libPods-XYLoveFreshBeenTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE830DC6E78515C1DB74897E /* libPods-XYLoveFreshBeenTests.a */; };
 		E5485BFCA7F9AF09568C73FB /* libPods-XYLoveFreshBeen.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFAE2D2FA67D9E4ECDB7733C /* libPods-XYLoveFreshBeen.a */; };
@@ -67,6 +68,8 @@
 		3C7EABC71D8E924800803AC0 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		3C7EABC91D8E929000803AC0 /* GuidePageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuidePageController.h; sourceTree = "<group>"; };
 		3C7EABCA1D8E929000803AC0 /* GuidePageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuidePageController.m; sourceTree = "<group>"; };
+		3C7EABCC1D8EA34F00803AC0 /* GuideCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideCell.h; sourceTree = "<group>"; };
+		3C7EABCD1D8EA34F00803AC0 /* GuideCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuideCell.m; sourceTree = "<group>"; };
 		69B9046792D482E42B58E2F3 /* Pods-XYLoveFreshBeenTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLoveFreshBeenTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYLoveFreshBeenTests/Pods-XYLoveFreshBeenTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6BFC1EE48BC8EE031D209173 /* Pods-XYLoveFreshBeenUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLoveFreshBeenUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYLoveFreshBeenUITests/Pods-XYLoveFreshBeenUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8D1C65F55864DFA11AD5DEE9 /* Pods-XYLoveFreshBeen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLoveFreshBeen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XYLoveFreshBeen/Pods-XYLoveFreshBeen.debug.xcconfig"; sourceTree = "<group>"; };
@@ -341,6 +344,8 @@
 		3C7EABC41D8E91FC00803AC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C7EABCC1D8EA34F00803AC0 /* GuideCell.h */,
+				3C7EABCD1D8EA34F00803AC0 /* GuideCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -645,6 +650,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C7EABCE1D8EA34F00803AC0 /* GuideCell.m in Sources */,
 				3C7EAB741D8E827900803AC0 /* AppDelegate.m in Sources */,
 				3C7EABCB1D8E929000803AC0 /* GuidePageController.m in Sources */,
 				3C7EABC81D8E924800803AC0 /* BaseViewController.m in Sources */,
