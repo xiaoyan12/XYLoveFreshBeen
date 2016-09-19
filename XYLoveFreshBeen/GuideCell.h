@@ -10,4 +10,8 @@
 
 @interface GuideCell : UICollectionViewCell
 
+@property (nonatomic ,strong)UIImage *image;
+
+-(void)setNextButtonHidden:(BOOL)hidden;
+
 @end

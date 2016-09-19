@@ -26,6 +26,12 @@ static NSString *cellID = @"cellId";
     
     self.guideImages = @[@"guide_40_1",@"guide_40_2",@"guide_40_3",@"guide_40_4"];
     
+   [self.view addSubview:self.collectionView];
+    [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.view);
+    }];
+   
+    [self setUpThePageControl];
     // Do any additional setup after loading the view.
 }
 
@@ -45,19 +51,56 @@ static NSString *cellID = @"cellId";
         _collectionView.showsVerticalScrollIndicator = false;
         _collectionView.showsHorizontalScrollIndicator = false;
         
-        [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([GuideCell class]) bundle:nil] forCellWithReuseIdentifier:cellID];
-        
-        [_collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.edges.equalTo(self.view);
-        }];
+        [_collectionView registerClass:[GuideCell class] forCellWithReuseIdentifier:cellID];
     }
     return _collectionView;
 }
+
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return self.guideImages.count;
+}
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    GuideCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellID forIndexPath:indexPath];
+    cell.image = [UIImage imageNamed:self.guideImages[indexPath.row]];
+    
+    if (indexPath.row == self.guideImages.count - 1) {
+        [cell setNextButtonHidden:false];
+    }else{
+        [cell setNextButtonHidden:true];
+    }
+    return cell;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSInteger index = (scrollView.contentOffset.x + self.view.frame.size.width * 0.5)/ self.view.frame.size.width;
+    self.pageControl.currentPage = index;
+}
+
+-(void)setUpThePageControl{
+    self.pageControl = [[UIPageControl alloc]init];
+    self.pageControl.numberOfPages = self.guideImages.count;
+    self.pageControl.currentPage = 0;
+    //先添加视图到View上，在进行用Masonry布局；
+    [self.view addSubview:self.pageControl];
+    
+    [self.pageControl mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.width.equalTo(self.view);
+        make.height.mas_equalTo(20);
+        make.leading.equalTo(self.view);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-50);
+    }];
+    
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
