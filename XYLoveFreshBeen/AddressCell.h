@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddressData.h"
 
+typedef void(^ModifyCallback)(NSInteger tag);
 @interface AddressCell : UITableViewCell
+
+@property (nonatomic ,strong) Address *address;
+
++(instancetype)cellWithTable:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath callbackBlock:(ModifyCallback)callback;
 
 @end

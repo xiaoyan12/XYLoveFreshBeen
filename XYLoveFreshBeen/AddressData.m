@@ -14,7 +14,7 @@
     NSData *data = [NSData dataWithContentsOfFile:path];
     NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
     AddressData *adressData = [AddressData mj_objectWithKeyValues:dict];
-    if (complete == nil) {
+    if (complete) {
         complete(adressData.data,nil);
     }
 }

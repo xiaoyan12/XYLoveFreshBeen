@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C02F4601D911BEB0085054B /* HomeHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02F45F1D911BEB0085054B /* HomeHeadView.m */; };
+		3C02F4631D911C840085054B /* HotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02F4621D911C840085054B /* HotView.m */; };
+		3C02F4661D911C9F0085054B /* PageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02F4651D911C9F0085054B /* PageScrollView.m */; };
+		3C02F4691D911CB20085054B /* BrandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02F4681D911CB20085054B /* BrandView.m */; };
+		3C02F46C1D911CC70085054B /* HeadlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02F46B1D911CC70085054B /* HeadlineView.m */; };
+		3C02F46F1D9122570085054B /* HomeHeadData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02F46E1D9122570085054B /* HomeHeadData.m */; };
+		3C02F4721D9128E20085054B /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C02F4711D9128E20085054B /* Activity.m */; };
 		3C7EAB711D8E827900803AC0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EAB701D8E827900803AC0 /* main.m */; };
 		3C7EAB741D8E827900803AC0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7EAB731D8E827900803AC0 /* AppDelegate.m */; };
 		3C7EAB7C1D8E827900803AC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C7EAB7B1D8E827900803AC0 /* Assets.xcassets */; };
@@ -77,6 +84,20 @@
 		1CEC107D1CFCC5CF30F3DB6E /* libPods-XYLoveFreshBeenUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-XYLoveFreshBeenUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2671DB6BC5C200D095A02185 /* Pods-XYLoveFreshBeen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLoveFreshBeen.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYLoveFreshBeen/Pods-XYLoveFreshBeen.release.xcconfig"; sourceTree = "<group>"; };
 		322A0D2E94F1624098C5077D /* Pods-XYLoveFreshBeenUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XYLoveFreshBeenUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-XYLoveFreshBeenUITests/Pods-XYLoveFreshBeenUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3C02F45E1D911BEB0085054B /* HomeHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeadView.h; sourceTree = "<group>"; };
+		3C02F45F1D911BEB0085054B /* HomeHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeadView.m; sourceTree = "<group>"; };
+		3C02F4611D911C840085054B /* HotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotView.h; sourceTree = "<group>"; };
+		3C02F4621D911C840085054B /* HotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotView.m; sourceTree = "<group>"; };
+		3C02F4641D911C9F0085054B /* PageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageScrollView.h; sourceTree = "<group>"; };
+		3C02F4651D911C9F0085054B /* PageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageScrollView.m; sourceTree = "<group>"; };
+		3C02F4671D911CB20085054B /* BrandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrandView.h; sourceTree = "<group>"; };
+		3C02F4681D911CB20085054B /* BrandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrandView.m; sourceTree = "<group>"; };
+		3C02F46A1D911CC70085054B /* HeadlineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeadlineView.h; sourceTree = "<group>"; };
+		3C02F46B1D911CC70085054B /* HeadlineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeadlineView.m; sourceTree = "<group>"; };
+		3C02F46D1D9122570085054B /* HomeHeadData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeHeadData.h; sourceTree = "<group>"; };
+		3C02F46E1D9122570085054B /* HomeHeadData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeHeadData.m; sourceTree = "<group>"; };
+		3C02F4701D9128E20085054B /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		3C02F4711D9128E20085054B /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		3C7EAB6C1D8E827900803AC0 /* XYLoveFreshBeen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XYLoveFreshBeen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C7EAB701D8E827900803AC0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3C7EAB721D8E827900803AC0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -220,11 +241,11 @@
 		3C7EAB6E1D8E827900803AC0 /* XYLoveFreshBeen */ = {
 			isa = PBXGroup;
 			children = (
+				3C7EABA61D8E851600803AC0 /* Other */,
 				3CC8F7F21D8FE54100430135 /* Resouce */,
 				3CC8F7DB1D8FD8FE00430135 /* Commen */,
 				3CC8F7C21D8F94F500430135 /* RootViewController */,
 				3C7EABB41D8E8C8900803AC0 /* GuidePage */,
-				3C7EABA61D8E851600803AC0 /* Other */,
 				3C7EABA51D8E850800803AC0 /* My */,
 				3C7EABA41D8E84F800803AC0 /* ShoppingCart */,
 				3C7EABA31D8E849A00803AC0 /* LightningSupermarket */,
@@ -327,6 +348,16 @@
 		3C7EABA81D8E854100803AC0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3C02F45E1D911BEB0085054B /* HomeHeadView.h */,
+				3C02F45F1D911BEB0085054B /* HomeHeadView.m */,
+				3C02F4611D911C840085054B /* HotView.h */,
+				3C02F4621D911C840085054B /* HotView.m */,
+				3C02F4641D911C9F0085054B /* PageScrollView.h */,
+				3C02F4651D911C9F0085054B /* PageScrollView.m */,
+				3C02F4671D911CB20085054B /* BrandView.h */,
+				3C02F4681D911CB20085054B /* BrandView.m */,
+				3C02F46A1D911CC70085054B /* HeadlineView.h */,
+				3C02F46B1D911CC70085054B /* HeadlineView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -334,6 +365,12 @@
 		3C7EABA91D8E854800803AC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3CC8F7D81D8F9B7700430135 /* Goods.h */,
+				3CC8F7D91D8F9B7700430135 /* Goods.m */,
+				3C02F4701D9128E20085054B /* Activity.h */,
+				3C02F4711D9128E20085054B /* Activity.m */,
+				3C02F46D1D9122570085054B /* HomeHeadData.h */,
+				3C02F46E1D9122570085054B /* HomeHeadData.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -382,8 +419,6 @@
 			children = (
 				3CC8F7D51D8F9A6900430135 /* UserShopCarTool.h */,
 				3CC8F7D61D8F9A6900430135 /* UserShopCarTool.m */,
-				3CC8F7D81D8F9B7700430135 /* Goods.h */,
-				3CC8F7D91D8F9B7700430135 /* Goods.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -843,9 +878,12 @@
 			files = (
 				3CC8F7F11D8FE4C000430135 /* AddressCell.m in Sources */,
 				3C7EABCE1D8EA34F00803AC0 /* GuideCell.m in Sources */,
+				3C02F4631D911C840085054B /* HotView.m in Sources */,
 				3C7EAB741D8E827900803AC0 /* AppDelegate.m in Sources */,
+				3C02F4691D911CB20085054B /* BrandView.m in Sources */,
 				3C7EABCB1D8E929000803AC0 /* GuidePageController.m in Sources */,
 				3CC8F7E81D8FDF1F00430135 /* AddressData.m in Sources */,
+				3C02F4721D9128E20085054B /* Activity.m in Sources */,
 				3CC8F7CB1D8F961E00430135 /* HomeViewController.m in Sources */,
 				3CC8F7EE1D8FE42300430135 /* MyAdressViewController.m in Sources */,
 				3C7EABC81D8E924800803AC0 /* BaseViewController.m in Sources */,
@@ -853,6 +891,8 @@
 				3CC8F7C51D8F959700430135 /* SelectedAdressViewController.m in Sources */,
 				3CC8F7EB1D8FE17000430135 /* UserInfo.m in Sources */,
 				3CC8F7D71D8F9A6900430135 /* UserShopCarTool.m in Sources */,
+				3C02F46F1D9122570085054B /* HomeHeadData.m in Sources */,
+				3C02F4601D911BEB0085054B /* HomeHeadView.m in Sources */,
 				3C7EAB711D8E827900803AC0 /* main.m in Sources */,
 				3C7EABBF1D8E902500803AC0 /* XYAppConst.m in Sources */,
 				3CC8F7CE1D8F965F00430135 /* FlashViewController.m in Sources */,
@@ -863,6 +903,8 @@
 				3CC8F7C11D8F93E400430135 /* BashNavigationController.m in Sources */,
 				3CC8F7DF1D8FD95B00430135 /* UIBarButtonItem+Butten.m in Sources */,
 				3CC8F7D41D8F969900430135 /* MyViewController.m in Sources */,
+				3C02F46C1D911CC70085054B /* HeadlineView.m in Sources */,
+				3C02F4661D911C9F0085054B /* PageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -22,4 +22,14 @@
 
 typedef void(^CompleteBlock)(id data,NSError *error);
 
+typedef NS_ENUM(NSInteger, HeadViewItemType){
+    HeadViewItemTypePage,
+    HeadViewItemTypeHot,
+    HeadViewItemTypeHeadline,
+    HeadViewItemTypeBrand,
+    HeadViewItemTypeScene
+};
+
+typedef void(^ClickCallback)(HeadViewItemType type, NSInteger tag);
+
 #endif /* PrefixHeader_pch */

@@ -42,7 +42,9 @@
 -(void)buildNavgationBar{
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem barButtonItem:@"扫一扫" image:@"icon_black_scancode" target:self action:@selector(leftItemClick) type:LeftItemButten];
     self.navigationItem.rightBarButtonItem = [UIBarButtonItem barButtonItem:@"搜索" image:@"icon_search" target:self action:@selector(rightItemClick) type:RightItemButten];
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:253/2555.0 green:212/255.0 blue:49/255.0 alpha:1.0];
+   
+     self.navigationController.navigationBar.barTintColor =
+    [UIColor colorWithRed:253/255.0 green:212/255.0 blue:49/255.0 alpha:1.0];
 }
 
 -(void)leftItemClick{

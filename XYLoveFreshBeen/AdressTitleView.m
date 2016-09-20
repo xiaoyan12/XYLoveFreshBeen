@@ -40,7 +40,7 @@
         }else{
             self.titleLable.text = @"您想送到哪儿";
         }
-        self.titleLable.font = [UIFont systemFontOfSize:10];
+        self.titleLable.font = [UIFont systemFontOfSize:15];
         [self.titleLable sizeToFit];
         [self addSubview:self.titleLable];
         [self.titleLable mas_makeConstraints:^(MASConstraintMaker *make) {
