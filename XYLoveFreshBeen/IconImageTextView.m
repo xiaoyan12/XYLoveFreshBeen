@@ -28,6 +28,7 @@
         self.lable.userInteractionEnabled = NO;
         self.lable.font = [UIFont systemFontOfSize:12];
         self.lable.textAlignment = NSTextAlignmentCenter;
+        [self addSubview:self.lable];
         [self.lable mas_makeConstraints:^(MASConstraintMaker *make) {
             make.leading.equalTo(self);
             make.trailing.equalTo(self);

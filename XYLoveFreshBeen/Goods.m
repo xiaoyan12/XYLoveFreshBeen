@@ -10,7 +10,7 @@
 
 @implementation Goods
 
-+(NSDictionary *)mj_objectClassInArray{
++(NSDictionary *)mj_replacedKeyFromPropertyName{
     return @{@"gid" : @"id"};
 }
 

@@ -17,11 +17,11 @@
     HomeHeadData *homeHeadData = [HomeHeadData mj_objectWithKeyValues:json[@"data"]];
     
     homeHeadData.focus = (ActInfo *)homeHeadData.act_info[0];
-    homeHeadData.icon = homeHeadData.act_info[1];
-    homeHeadData.headline = homeHeadData.act_info[2];
-    homeHeadData.brand = homeHeadData.act_info[3];
-    homeHeadData.scene = homeHeadData.act_info[4];
-    homeHeadData.category = homeHeadData.act_info[5];
+    homeHeadData.icon = (ActInfo *)homeHeadData.act_info[1];
+    homeHeadData.headline = (ActInfo *)homeHeadData.act_info[2];
+    homeHeadData.brand = (ActInfo *)homeHeadData.act_info[3];
+    homeHeadData.scene = (ActInfo *)homeHeadData.act_info[4];
+    homeHeadData.category = (ActInfo *)homeHeadData.act_info[5];
     if (homeHeadData) {
         complete(homeHeadData,nil);
     }

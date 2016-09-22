@@ -130,6 +130,45 @@ static NSString *headerCellId = @"headerCellId";
     return itemSize;
 }
 
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
+    if (section == 0) {
+        return CGSizeMake(XYWidth, HomeCollectionViewCellMargin);
+    }else if (section == 1){
+        return CGSizeMake(XYWidth, HomeCollectionViewCellMargin * 3);
+    }
+    return CGSizeZero;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(nonnull UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section{
+    if (section == 1) {
+        return CGSizeMake(XYWidth, HomeCollectionViewCellMargin * 5);
+    }
+    return CGSizeZero;
+}
+
+-(UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
+        HomeHeaderCell *cell = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:headerCellId forIndexPath:indexPath];
+        if (indexPath.section == 0) {
+            [cell showTitleLable:NO];
+        }else{
+            [cell showTitleLable:YES];
+        }
+        return cell;
+    }
+    
+    HomeFooterCell *cell = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:footerCellId forIndexPath:indexPath];
+    return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    /*
+     
+     
+     
+     
+     */
+}
 
 -(void)buildTableHeadView{
     __weak typeof(self) weakSelf = self;
