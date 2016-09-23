@@ -1,14 +1,20 @@
 //
 //  FlashViewController.m
-//  XYLoveFreshBeen
+//  LoveFreshBeen_OC
 //
-//  Created by 闫世超 on 16/9/19.
-//  Copyright © 2016年 闫世超. All rights reserved.
+//  Created by 江科 on 16/3/1.
+//  Copyright © 2016年 江科. All rights reserved.
 //
 
 #import "FlashViewController.h"
+#import "ProductsViewController.h"
+#import "SuperMarketSource.h"
+#import "CategoryCell.h"
+@interface FlashViewController ()<UITableViewDataSource,UITableViewDelegate,ProductsDelagate>
 
-@interface FlashViewController ()
+@property (nonatomic,strong) UITableView *categoriesTableView;
+@property (nonatomic,strong) ProductsViewController *productsController;
+@property (nonatomic,strong) SuperMarketData *superMarketData;
 
 @end
 
@@ -16,22 +22,79 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self buildCategoriesTableView];
+    [self buildProductsTableView];
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)buildCategoriesTableView {
+    self.categoriesTableView = ({
+        UITableView *view = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
+        view.delegate = self;
+        view.separatorStyle = UITableViewCellSeparatorStyleNone;
+        view.dataSource = self;
+        view.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1.0];
+        view.showsVerticalScrollIndicator = NO;
+        view;
+    });
+    [self.view addSubview:self.categoriesTableView];
+    [self.categoriesTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view);
+        make.leading.equalTo(self.view);
+        make.bottom.equalTo(self.view);
+        make.width.mas_equalTo(self.view).multipliedBy(0.25);
+    }];
 }
-*/
+- (void)buildProductsTableView {
+    self.productsController = [[ProductsViewController alloc]init];
+    [self addChildViewController:self.productsController];
+    [self.view addSubview:self.productsController.view];
+    self.delegate = self.productsController;
+    self.productsController.delegate = self;
+}
+- (void)loadData {
+    __weak typeof(self) wself = self;
+    [SuperMarketSource loadSupermarketData:^(id data, NSError *error) {
+        wself.superMarketData = data;
+        [wself.categoriesTableView reloadData];
+        [wself.categoriesTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionTop];
+        wself.productsController.superData = data;
+    }];
+}
+#pragma datasource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return  self.superMarketData.categories.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    CategoryCell *cell = [CategoryCell cellWithTable:tableView];
+    cell.categroies = self.superMarketData.categories[indexPath.row];
+    return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([self.delegate respondsToSelector:@selector(didTableView:clickedAtIndexPath:)]) {
+        [self.delegate didTableView:self.categoriesTableView clickedAtIndexPath:indexPath];
+    }
+}
+#pragma ProductsDelegate
+-(void)willDislayHeaderView:(NSInteger)section {
+    [self.categoriesTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:section inSection:0] animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+}
+
+- (void)didEndDislayHeaderView:(NSInteger)section {
+    [self.categoriesTableView selectRowAtIndexPath:[NSIndexPath indexPathForItem:section + 1 inSection:0] animated:YES scrollPosition:UITableViewScrollPositionMiddle];
+}
+
+
+
 
 @end

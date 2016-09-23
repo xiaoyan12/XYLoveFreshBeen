@@ -18,23 +18,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   // [self.view addSubview:self.backBtn];
+    self.backBtn = ({
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btn setImage:[UIImage imageNamed:@"v2_goback"] forState:UIControlStateNormal];
+        btn.titleLabel.hidden = YES;
+        [btn addTarget:self action:@selector(backBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+        btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+        btn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+        btn.frame = CGRectMake(0, 0, 44, 40);
+        btn;
+    });
     // Do any additional setup after loading the view.
 }
 
--(UIButton *)backBtn{
-    if (_backBtn == nil) {
-        _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_backBtn setImage:[UIImage imageNamed:@"v2_goback"] forState:UIControlStateNormal];
-        _backBtn.titleLabel.hidden = YES;
-        
-        [_backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
-        _backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
-        _backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
-        _backBtn.frame = CGRectMake(0, 0, 44, 40);
-    }
-    return _backBtn;
+- (void)backBtnClicked:(UIButton *)btn {
+    [self popViewControllerAnimated:YES];
 }
+
+//-(UIButton *)backBtn{
+//    if (_backBtn == nil) {
+//        _backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+//        [_backBtn setImage:[UIImage imageNamed:@"v2_goback"] forState:UIControlStateNormal];
+//        _backBtn.titleLabel.hidden = YES;
+//        
+//        [_backBtn addTarget:self action:@selector(backBtnClick) forControlEvents:UIControlEventTouchUpInside];
+//        _backBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
+//        _backBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -10, 0, 0);
+//        _backBtn.frame = CGRectMake(0, 0, 44, 40);
+//    }
+//    return _backBtn;
+//}
 
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     if (self.viewControllers.count >0) {
@@ -44,9 +57,9 @@
     [super pushViewController:viewController animated:animated];
 }
 
--(void)backBtnClick{
-    [self popViewControllerAnimated:YES];
-}
+//-(void)backBtnClick{
+//    [self popViewControllerAnimated:YES];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

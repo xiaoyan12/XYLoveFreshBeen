@@ -128,7 +128,7 @@
 }
 
 -(void)setGoods:(Goods *)goods{
-    self.type = HomeCellTypeHorizontal;
+    self.type = HomeCellTypeVertical;
     [self.goodsImageView sd_setImageWithURL:[NSURL URLWithString:goods.img] placeholderImage:[UIImage imageNamed:@"v2_placeholder_square"]];
     self.nameLable.text = goods.name;
     if ([goods.pm_desc isEqualToString:@"买一赠一"]) {
