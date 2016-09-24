@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Goods.h"
 
 @interface ShopCartCell : UITableViewCell
+
+@property (nonatomic ,strong) Goods *goods;
+
++(instancetype)cellWithTableView:(UITableView *)tableView;
 
 @end

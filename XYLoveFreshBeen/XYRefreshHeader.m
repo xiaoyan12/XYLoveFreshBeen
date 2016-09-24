@@ -13,7 +13,7 @@
 -(void)prepare{
     [super prepare];
     self.stateLabel.hidden = NO;
-    self.lastUpdatedTimeLabel.hidden = NO;
+    self.lastUpdatedTimeLabel.hidden = YES;
     
     [self setImages:@[[UIImage imageNamed:@"v2_pullRefresh1"]] forState:MJRefreshStateIdle];
     [self setImages:@[[UIImage imageNamed:@"v2_pullRefresh2"]] forState:MJRefreshStatePulling];

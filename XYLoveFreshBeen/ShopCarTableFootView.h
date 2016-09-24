@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^SureButtonClick)();
+
 @interface ShopCarTableFootView : UIView
+
+@property (nonatomic ) CGFloat price;
+@property (nonatomic ,copy) SureButtonClick sureButtonClick;
 
 @end

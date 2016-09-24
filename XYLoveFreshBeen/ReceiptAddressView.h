@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddressData.h"
 
+typedef void(^ModifyBtnClick)();
 @interface ReceiptAddressView : UIView
+
+@property (nonatomic ,strong) Address *address;
+
+-(instancetype)initWithFrame:(CGRect)frame modify:(ModifyBtnClick)modify;
 
 @end
