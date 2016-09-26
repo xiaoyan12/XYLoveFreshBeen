@@ -11,6 +11,7 @@
 #import "AdressTitleView.h"
 #import "UserInfo.h"
 #import "MyAdressViewController.h"
+#import "ScenViewController.h"
 
 @interface SelectedAdressViewController ()
 
@@ -48,7 +49,8 @@
 }
 
 -(void)leftItemClick{
-    
+    //[self.navigationController pushViewController:[[ScenViewController alloc] init] animated:YES];
+    [self presentViewController:[[ScenViewController alloc] init] animated:YES completion:nil];
 }
 -(void)rightItemClick{
     

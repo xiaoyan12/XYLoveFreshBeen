@@ -79,6 +79,9 @@
 		3CC8F8141D8FE54100430135 /* 系统消息 in Resources */ = {isa = PBXBuildFile; fileRef = 3CC8F8021D8FE54100430135 /* 系统消息 */; };
 		3CC8F8151D8FE54100430135 /* 首页新鲜热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 3CC8F8031D8FE54100430135 /* 首页新鲜热卖 */; };
 		3CC8F8161D8FE54100430135 /* 首页热卖 in Resources */ = {isa = PBXBuildFile; fileRef = 3CC8F8041D8FE54100430135 /* 首页热卖 */; };
+		3CDB64AC1D98D3F80038CCB3 /* ScenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB64AB1D98D3F80038CCB3 /* ScenViewController.m */; };
+		3CDB64AF1D98D4EA0038CCB3 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB64AE1D98D4EA0038CCB3 /* UIView+Extension.m */; };
+		3CDB64B21D9911890038CCB3 /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CDB64B11D9911890038CCB3 /* ResultViewController.m */; };
 		3CFA2B8E1D94C1C10050A53D /* SuperMarketSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA2B8D1D94C1C10050A53D /* SuperMarketSource.m */; };
 		3CFA2B911D94C3830050A53D /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA2B901D94C3830050A53D /* ProductsViewController.m */; };
 		3CFA2B941D94C4460050A53D /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFA2B931D94C4460050A53D /* CategoryCell.m */; };
@@ -245,6 +248,12 @@
 		3CC8F8021D8FE54100430135 /* 系统消息 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "系统消息"; sourceTree = "<group>"; };
 		3CC8F8031D8FE54100430135 /* 首页新鲜热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页新鲜热卖"; sourceTree = "<group>"; };
 		3CC8F8041D8FE54100430135 /* 首页热卖 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "首页热卖"; sourceTree = "<group>"; };
+		3CDB64AA1D98D3F80038CCB3 /* ScenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScenViewController.h; sourceTree = "<group>"; };
+		3CDB64AB1D98D3F80038CCB3 /* ScenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScenViewController.m; sourceTree = "<group>"; };
+		3CDB64AD1D98D4EA0038CCB3 /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
+		3CDB64AE1D98D4EA0038CCB3 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
+		3CDB64B01D9911890038CCB3 /* ResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		3CDB64B11D9911890038CCB3 /* ResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
 		3CFA2B8C1D94C1C10050A53D /* SuperMarketSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SuperMarketSource.h; sourceTree = "<group>"; };
 		3CFA2B8D1D94C1C10050A53D /* SuperMarketSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SuperMarketSource.m; sourceTree = "<group>"; };
 		3CFA2B8F1D94C3830050A53D /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
@@ -695,6 +704,10 @@
 				3CC8F7C41D8F959700430135 /* SelectedAdressViewController.m */,
 				3CC8F7EC1D8FE42300430135 /* MyAdressViewController.h */,
 				3CC8F7ED1D8FE42300430135 /* MyAdressViewController.m */,
+				3CDB64AA1D98D3F80038CCB3 /* ScenViewController.h */,
+				3CDB64AB1D98D3F80038CCB3 /* ScenViewController.m */,
+				3CDB64B01D9911890038CCB3 /* ResultViewController.h */,
+				3CDB64B11D9911890038CCB3 /* ResultViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -734,6 +747,8 @@
 				3C365BBB1D928CC700E6AF80 /* UIColor+Extension.m */,
 				3C4BA7F31D93C2FE00E53AB9 /* NSString+Extension.h */,
 				3C4BA7F41D93C2FE00E53AB9 /* NSString+Extension.m */,
+				3CDB64AD1D98D4EA0038CCB3 /* UIView+Extension.h */,
+				3CDB64AE1D98D4EA0038CCB3 /* UIView+Extension.m */,
 			);
 			name = Commen;
 			sourceTree = "<group>";
@@ -880,6 +895,7 @@
 				TargetAttributes = {
 					3C7EAB6B1D8E827900803AC0 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = K9K2K9AZ3H;
 						ProvisioningStyle = Automatic;
 					};
 					3C7EAB841D8E827900803AC0 = {
@@ -1104,6 +1120,7 @@
 				3C062C621D965A9300F1E7E6 /* MyOrderHeadView.m in Sources */,
 				3CC8F7F11D8FE4C000430135 /* AddressCell.m in Sources */,
 				3C4BA7F01D938EC800E53AB9 /* DiscountPriceView.m in Sources */,
+				3CDB64AC1D98D3F80038CCB3 /* ScenViewController.m in Sources */,
 				3C7EABCE1D8EA34F00803AC0 /* GuideCell.m in Sources */,
 				3C365BA21D9234B800E6AF80 /* HeadlinePageView.m in Sources */,
 				3C4BA7ED1D938EAE00E53AB9 /* BuyView.m in Sources */,
@@ -1114,6 +1131,7 @@
 				3CC8F7E81D8FDF1F00430135 /* AddressData.m in Sources */,
 				3C4BA7EA1D9377F800E53AB9 /* HeadlineContentView.m in Sources */,
 				3C02F4721D9128E20085054B /* Activity.m in Sources */,
+				3CDB64AF1D98D4EA0038CCB3 /* UIView+Extension.m in Sources */,
 				3C365B9F1D92196300E6AF80 /* IconImageTextView.m in Sources */,
 				3CC8F7CB1D8F961E00430135 /* HomeViewController.m in Sources */,
 				3CC8F7EE1D8FE42300430135 /* MyAdressViewController.m in Sources */,
@@ -1137,6 +1155,7 @@
 				3CFA2B971D94E7400050A53D /* FlashViewController.m in Sources */,
 				3CFA2B911D94C3830050A53D /* ProductsViewController.m in Sources */,
 				3C365BB91D92852600E6AF80 /* HomeCellGoodsView.m in Sources */,
+				3CDB64B21D9911890038CCB3 /* ResultViewController.m in Sources */,
 				3CFA2B8E1D94C1C10050A53D /* SuperMarketSource.m in Sources */,
 				3C365BAD1D92516100E6AF80 /* HomeCategoryCell.m in Sources */,
 				3C062C551D96161B00F1E7E6 /* OrserPayWayViewController.m in Sources */,
@@ -1304,11 +1323,13 @@
 			baseConfigurationReference = 8D1C65F55864DFA11AD5DEE9 /* Pods-XYLoveFreshBeen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9K2K9AZ3H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYLoveFreshBeen/PrefixHeader.pch";
 				INFOPLIST_FILE = XYLoveFreshBeen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xiaoyan.XYLoveFreshBeen;
+				PRODUCT_BUNDLE_IDENTIFIER = xiaoyan.LoveFreshBeen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1318,11 +1339,13 @@
 			baseConfigurationReference = 2671DB6BC5C200D095A02185 /* Pods-XYLoveFreshBeen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = K9K2K9AZ3H;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/XYLoveFreshBeen/PrefixHeader.pch";
 				INFOPLIST_FILE = XYLoveFreshBeen/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xiaoyan.XYLoveFreshBeen;
+				PRODUCT_BUNDLE_IDENTIFIER = xiaoyan.LoveFreshBeen;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
